@@ -1,4 +1,7 @@
-//Return type of variables in JavaScript
+//JavaScript is a dynamically typed language. 
+// This means that you don't need to specify the data type of a variable when you declare it.
+
+// +++++++++++Return type of variables in JavaScript++++++++++++++++++
 /*1) Primitive Datatypes
        Number => number
        String  => string
@@ -40,3 +43,37 @@ const myFunction = function(){
 }
 
 console.log(typeof myObj);
+ 
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+/*
+datatypes are based on memory allocation
+Stack
+Primitive datatypes->  call by value (string,number,boolean,null,undefined,BigInt,symbol) ->Stack memory
+*/
+let myname = "Princeyadav"
+let anothername = myname
+anothername = "vineetyadav"
+
+console.log(myname);
+console.log(anothername);
+
+
+/*
+Heap
+Reference/Non primitive data types -> call by reference ( array,object, function) -> heap memory
+*/
+
+let userOne = {
+    email: "user@google.com",
+    upi:"user@ybl"
+}
+
+let userTwo = userOne
+
+userTwo.email = "prince@google.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
+
